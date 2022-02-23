@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3" offset="9">
+          <img src="../../../assets/QXLogo.svg">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="10" offset-md="1" size-sm="12" offset-sm="0">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle class="center">Diese Schnittstelle erstellt aus einem beliebigen Text eine alphabetisch sortierte Wortliste als Datenbasis für Ihre Quod.X®-Freitextanalyse. Der Ursprungstext wird an keiner Stelle gespeichert.</ion-card-subtitle>
+            <ion-card-title class="center bold">Kopieren Sie den auszuwertenden Text in das folgende Feld und ergänzen Sie die Meta-Infomationen:</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-textarea placeholder="Hier einfügen..." [(ngModel)]="input" rows="25"></ion-textarea>
+            <ion-grid *ngIf="input != null">
+              <ion-row>
+                <ion-col size="4">
+                  <ion-item>
+                    <ion-select placeholder="Anrede" interface="popover" [(ngModel)]="anrede">
+                      <ion-select-option value="Du">Du</ion-select-option>
+                      <ion-select-option value="Sie">Sie</ion-select-option>
+                    </ion-select>
+                  </ion-item>
+                </ion-col>
+                <ion-col size="4">
+                  <ion-item>
+                    <ion-select placeholder="Geschlecht" interface="popover" [(ngModel)]="sex">
+                      <ion-select-option value="m">Männlich</ion-select-option>
+                      <ion-select-option value="w">Weiblich</ion-select-option>
+                      <ion-select-option value="d">Divers</ion-select-option>
+                    </ion-select>
+                  </ion-item>
+                </ion-col>
+                <ion-col size="4">
+                  <ion-item>
+                    <ion-select placeholder="Auswertungstyp" interface="popover" [(ngModel)]="type">
+                      <ion-select-option value="Person">Person</ion-select-option>
+                      <ion-select-option value="Personengruppe">Personengruppe</ion-select-option>
+                      <ion-select-option value="Team">Team</ion-select-option>
+                      <ion-select-option value="Unternehmen">Unternehmen</ion-select-option>
+                    </ion-select>
+                  </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            <div class="center margin-top" *ngIf="input != null && sex != null && anrede != null && type != null">
+              <ion-button (click)="wordlistErstellen()">Wortliste kopieren und senden</ion-button>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
