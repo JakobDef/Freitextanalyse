@@ -24,7 +24,7 @@ export class HomePage implements OnInit {
     wordlist = inputEdited.split(/[\s\n\r]+/);
     wordlist.sort();
 
-    var mail = `Anrede: ${this.anrede}\nGeschlecht: ${this.sex}\nAuswertungstyp: ${this.type}\n`;
+    var mail = `Anrede: ${this.anrede}\nGeschlecht: ${this.sex}\nAuswertungstyp: ${this.type}\n\n`;
 
     for(var z = 0; z < wordlist.length; z++){
 
