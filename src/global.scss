@@ -77,6 +77,12 @@ ion-button {
   color: white !important;
 }
 
+ion-card-subtitle {
+  font-weight: 100;
+  font-size: 18px;
+  text-transform: none;
+}
+
 @media only screen and (max-width: 767px) {
   ion-card-subtitle {
     font-weight: 100;
