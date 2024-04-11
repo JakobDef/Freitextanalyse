@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'Freitextanalyse-New' title`, () => {
+  it(`should have the 'Freitextanalyse' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Freitextanalyse-New');
+    expect(app.title).toEqual('Freitextanalyse');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Freitextanalyse-New');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Freitextanalyse');
   });
 });
