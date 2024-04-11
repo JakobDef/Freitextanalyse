@@ -1,0 +1,48 @@
+<div class="bg-white border-b-black border-b-[0.5px] w-full justify-end flex p-3">
+    <img src="../../../assets/QXLogo.svg" class="max-h-[75px] mr-5">
+</div>
+
+ <div class="justify-center flex bg-[#FBAF17]">
+
+    <div class="border-black border-[0.5px] rounded-md bg-white center w-[75%] m-7 p-5">
+        <h3 class="center">Diese Schnittstelle erstellt aus einem beliebigen Text eine alphabetisch sortierte Wortliste als Datenbasis für Ihre Quod.X®-Freitextanalyse. Der Ursprungstext wird an keiner Stelle gespeichert.</h3>
+        <h2 class="center bold">Kopieren Sie den auszuwertenden Text in das folgende Feld und ergänzen Sie die Meta-Infomationen:</h2>
+
+        <textarea placeholder="Hier einfügen..." [(ngModel)]="input" rows="20" class="w-full border border-black p-2"></textarea>
+        <!-- <div *ngIf="input != null">
+
+            <form [formGroup]="form" (ngSubmit)="wordlistErstellen()"></form>
+
+                <div class="selectWrapper mr-[3px]">
+                    <select formControlName="anrede" [ngClass]="{'placeholder' : anrede?.value == ''}">
+                        <option disabled selected value>Bitte Auswählen</option>
+                        <option value="Du">Du</option>
+                        <option value="Sie">Sie</option>
+                    </select>
+                    <div class="select__arrow"></div>
+                </div>
+                <div class="selectWrapper mr-[3px]">
+                    <select formControlName="sex" [ngClass]="{'placeholder' : sex?.value == ''}">
+                        <option disabled selected value>Bitte Auswählen</option>
+                        <option value="m">Männlich</option>
+                        <option value="w">Weiblich</option>
+                    </select>
+                    <div class="select__arrow"></div>
+                </div>
+                <div class="selectWrapper w-[33%]">
+                    <select formControlName="type" [ngClass]="{'placeholder' : type?.value == ''}">
+                        <option disabled selected value>Bitte Auswählen</option>
+                        <option value="Person">Person</option>
+                        <option value="Personengruppe">Personengruppe</option>
+                        <option value="Team">Team</option>
+                        <option value="Unternehmen">Unternehmen</option>
+                    </select>
+                    <div class="select__arrow"></div>
+                </div>
+        </div> -->
+        <div class="justify-center flex mt-3" *ngIf="input != null">
+            <button (click)="wordlistErstellen()">Wortliste kopieren und senden</button>
+        </div>
+    </div>
+
+</div> 
